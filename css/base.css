@@ -27,16 +27,31 @@
 
 html,body{text-align:center;}
 body{font-family: veggimed, Tahoma, Verdana, Arial, sans-serif; font-size:19px;}
+hr{border-color:#4E387B; border-width:2px; margin-top:2px;}
 
 #wrapper{width:100%;}
 #page{margin:0px auto; padding:0px; text-align:left; width:703px;}
-#central{width:100%; padding-top: 10px;}
+#central{width:100%; padding-top: 25px;}
 
 .titulo{height:72px; background:url("../images/logo.png") no-repeat; padding-left: 215px;}
-.eslogan{color:#4E387B; font-family:veggibol; font-size:32px; float: left; text-align: center; margin-top:3px;}
-.cuerpo{height: 400px; position: relative; width: 100%;}
+.eslogan{color:#4E387B; font-size:32px; font-weight:bold; float: left; text-align: center; margin-top:3px;}
+.cuerpo{position: relative; width: 100%;}
 .login{left: 27%; position: absolute; top: 125px; width: 46%;}
 .loginTexto{width:100%; margin-bottom:10px; font-weight:bold;}
-.cajaTexto{border-color: #4E387B; border-radius: 15px; float: right; padding-left: 5px; width: 180px;}
+.caja{border-color: #4E387B; border-radius: 15px; float: right; padding-left: 5px; width: 180px;}
 .loginBoton{width:100%; text-align: center; margin-top: 20px;}
-.boton{ background-color: #4E387B; border-radius: 15px; color: #FFFFFF; font-size: 28px; padding: 5px 10px;}
+.boton{background-color: #4E387B; border-radius: 15px; color: #FFFFFF;}
+.botonGrande{font-size: 28px; padding: 5px 10px;}
+
+.menuArriba{margin-top: 45px; width:100%; height:30px;}
+.formulario{width:100%; padding-top:10px;}
+.fila{width:100%; margin-bottom:15px; float:left;}
+.columna3{width:31%; margin-right:3%; float:left;}
+.columna2{width:43%; margin-right:13%; float:left;}
+.ultimaCol{margin-right:0%;}
+.cajaCorta{width: 131px;}
+.textoGestion{font-weight:bold;}
+.botonPequeno{font-size:16px;}
+
+
+

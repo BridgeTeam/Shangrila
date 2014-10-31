@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description"content="P&aacute;gina de empleados."/>
+		<meta name="keywords" content="manos, belleza, pies" />
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+		<title>Shangri-l&aacute;</title>
+		
+		<link rel="icon" type="image/png" href="../images/favicon.png" />
+
+		<link rel="stylesheet" href="../css/base.css" />	
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="page">
+				<div id="central">
+					<header class="titulo">
+						<span class="eslogan">"Un lugar de felicidad permanente aislado del mundo exterior"</span>
+					</header>
+					<div class="cuerpo">
+						<div class="menuArriba">
+							<img alt="Salida" src="../images/salir.png" style="margin-left:10px; float:right;">
+							<img alt="Salida" src="../images/cierre.png" style="float:right;">
+						</div>
+						<hr>
+						<form class="formulario">
+							<div class="fila">
+								<div class="columna3">
+									<span class="textoGestion">Nombre</span>
+									<input type="text" class="caja cajaCorta" id="nombre" />
+								</div>
+								<div class="columna3">
+									<span class="textoGestion">Apellidos</span>
+									<input type="text" class="caja cajaCorta" id="apellidos" />
+								</div>
+								<div class="columna3 ultimaCol">
+									<span class="textoGestion">Tel&eacute;fono</span>
+									<input type="number" class="caja cajaCorta" id="telefono" />
+								</div>
+							</div>
+							<div class="fila">
+								<div class="columna3">
+									<span class="textoGestion">Cod. Postal</span>
+									<input type="number" style="width:100px;" class="caja" id="codPost" />
+								</div>
+								<div class="columna3">
+									<span class="textoGestion">Sexo</span>
+									<div style="float:right;">
+										<input type="radio" value="0" name="sexo" />Chica
+										<input type="radio" value="1" name="sexo" />Chico
+									</div>
+								</div>
+								<div class="columna3 ultimaCol">
+									<span class="textoGestion">Edad</span>
+									<select id="edadesCliente" class="caja cajaCorta">
+										<option value="0">Selecciona edad</option>
+										<option value="1">0 - 14</option>
+										<option value="2">15 - 25</option>
+										<option value="3">26 - 40</option>
+										<option value="4">41 - 60</option>
+										<option value="5">+ 60</option>
+									</select>
+								</div>
+							</div>
+							<div class="fila">
+								<div class="columna2">
+									<span class="textoGestion">E-mail</span>
+									<input type="email" style="width:230px;" class="caja" id="mail" />
+								</div>
+								<div class="columna2  ultimaCol">
+									<span class="textoGestion">Forma de contacto</span>
+									<select id="edadesCliente" class="caja cajaCorta">
+										<option value="0">Ninguna</option>
+										<option value="1">SMS</option>
+										<option value="2">Email</option>
+										<option value="3">Llamada</option>
+										<option value="4">Whatsapp</option>
+									</select>
+								</div>
+							</div>
+							<div class="fila" style="text-align:center;">
+								<span class="textoGestion">Amiga de</span>
+								<input type="button" value="Consultar" id="consultar" class="boton botonPequeno" />
+							</div>
+							<hr style="float:left; width:100%;">
+							<div class="fila" style="text-align:center; margin-top:20px;">
+								<input type="button" value="Facturar" id="facturar" class="boton botonGrande" name="botonDinamico" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
