@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "veggibol";
+	src: url("fonts/veggibol.eot");
+	src: url("fonts/veggibol.eot?#iefix") format("embedded-opentype"),
+	     url("fonts/veggibol.woff") format("woff"),
+	     url("fonts/veggibol.ttf") format("truetype"),
+	     url("fonts/veggibol.svg#veggibol") format("svg");;
+}
+
+@font-face {
+	font-family: "veggimed";
+	src: url("fonts/veggimed.eot");
+	src: url("fonts/veggimed.eot?#iefix") format("embedded-opentype"),
+	     url("fonts/veggimed.woff") format("woff"),
+	     url("fonts/veggimed.ttf") format("truetype"),
+	     url("fonts/veggimed.svg#veggimed") format("svg");;
+}
+
+@font-face {
+	font-family: "veggilig";
+	src: url("fonts/veggilig.eot");
+	src: url("fonts/veggilig.eot?#iefix") format("embedded-opentype"),
+	     url("fonts/veggilig.woff") format("woff"),
+	     url("fonts/veggilig.ttf") format("truetype"),
+	     url("fonts/veggilig.svg#veggilig") format("svg");;
+}
+
+html,body{text-align:center;}
+body{font-family: veggimed, Tahoma, Verdana, Arial, sans-serif; font-size:19px;}
+
+#wrapper{width:100%;}
+#page{margin:0px auto; padding:0px; text-align:left; width:703px;}
+#central{width:100%; padding-top: 10px;}
+
+.titulo{height:72px; background:url("../images/logo.png") no-repeat; padding-left: 215px;}
+.eslogan{color:#4E387B; font-size:32px; float: left; text-align: center; margin-top:3px;}
+.cuerpo{height: 400px; position: relative; width: 100%;}
+.login{left: 27%; position: absolute; top: 100px; width: 46%;}
+.loginTexto{width:100%; margin-bottom:10px; font-weight:bold;}
+.cajaTexto{border-color: #4E387B; border-radius: 15px; float: right; padding-left: 5px; width: 180px;}
+.loginBoton{width:100%; text-align: center; margin-top: 20px;}
+.boton{ background-color: #4E387B; border-radius: 15px; color: #FFFFFF; font-size: 28px; padding: 5px 10px;}
