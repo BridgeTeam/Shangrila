@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description"content="P&aacute;gina de empleados."/>
+		<meta name="keywords" content="manos, belleza, pies" />
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+		<title>Shangri-l&aacute;</title>
+		
+		<link rel="icon" type="image/png" href="../images/favicon.png" />
+
+		<link rel="stylesheet" href="../css/base.css" />	
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="page">
+				<div id="central">
+					<header class="titulo">
+						<span class="eslogan">"Un lugar de felicidad permanente aislado del mundo exterior"</span>
+					</header>
+					<div class="cuerpo">
+						<div class="menuArriba">
+							<div class="clienteFactura">
+								<span class="nombreCliente">Nombre Apellido1 Apellido2</span>
+								<span class="telefonoCliente">888-888-888</span>
+							</div>
+							<img title="Cambiar empleado" class="imagenMenu" src="../images/salir.png" style="margin-left:20px;" />
+							<img title="Cierre del dia" class="imagenMenu" src="../images/cierre.png" style="margin-left:20px;"/>
+							<img title="P&aacute;gina clientes" class="imagenMenu" src="../images/cliente.png" />
+						</div>
+						<hr>
+						<div class="tabla" id="tablaCliente">
+							<div class="filaTabla">
+								<div class="columnaTabla cabecera">Fecha</div>
+								<div class="columnaTabla cabecera">Centro</div>
+								<div class="columnaTabla cabecera">Empleado</div>
+								<div class="columnaTabla cabecera columnaTratamiento" style="border-right:0 none;">Tratamiento</div>
+							</div>
+							<div class="filaTabla impar">
+								<div class="columnaTabla">08-04-2014 17:05:36</div>
+								<div class="columnaTabla">Chamberí</div>
+								<div class="columnaTabla">Nombre Emp1</div>
+								<div class="columnaTabla columnaCompartida">Mani Natural</div>
+								<div class="columnaTabla iconoTabla">
+									<img alt="Editar" src="../images/editar.png" />
+								</div>
+							</div>
+							<div class="filaTabla par">
+								<div class="columnaTabla">10-07-2014 11:15:46</div>
+								<div class="columnaTabla">Chamberí</div>
+								<div class="columnaTabla">Nombre Emp2</div>
+								<div class="columnaTabla columnaCompartida">Pedi Natural</div>
+								<div class="columnaTabla iconoTabla">
+									<img alt="Editar" src="../images/editar.png" />
+								</div>
+							</div>
+							<div class="filaTabla impar">
+								<div class="columnaTabla">28-12-2014 09:03:16</div>
+								<div class="columnaTabla">Chamberí</div>
+								<div class="columnaTabla">Nombre Emp3</div>
+								<div class="columnaTabla columnaCompartida">Pestañas Super Super Super Largas, tanto</div>
+								<div class="columnaTabla iconoTabla">
+									<img alt="Editar" src="../images/editar.png" />
+								</div>
+							</div>
+						</div>
+						<hr>
+						<form class="formulario" id="formFacturacion">
+							<div class="fila">
+								<div class="columna2">
+									<span class="textoGestion">Tipo de tratamiento</span>
+									<select id="edadesCliente" style="width:138px;" class="caja">
+										<option value="0">Selecciona edad</option>
+										<option value="1">0 - 14</option>
+										<option value="2">15 - 25</option>
+										<option value="3">26 - 40</option>
+										<option value="4">41 - 60</option>
+										<option value="5">+ 60</option>
+									</select>
+								</div>
+								<div class="columna2 ultimaCol">
+									<span class="textoGestion">Tratamiento</span>
+									<select id="edadesCliente" style="width:220px;" class="caja">
+										<option value="0">Selecciona edad</option>
+										<option value="1">0 - 14</option>
+										<option value="2">15 - 25</option>
+										<option value="3">26 - 40</option>
+										<option value="4">41 - 60</option>
+										<option value="5">+ 60</option>
+									</select>
+								</div>
+							</div>
+							<div class="fila">
+								<div class="columna2" style="padding-top: 8px;">
+									<span class="textoGestion">Descuentos</span>
+									<select id="edadesCliente" style="width:215px;" class="caja">
+										<option value="0">Sin descuento</option>
+										<option value="1">0 - 14</option>
+										<option value="2">15 - 25</option>
+										<option value="3">26 - 40</option>
+										<option value="4">41 - 60</option>
+										<option value="5">+ 60</option>
+									</select>
+								</div>
+								<div class="columna3" style="width:21%; padding-top: 8px;">
+									<span class="textoGestion">Precio</span>
+									<input type="number" style="width:75px;" class="caja" id="codPost" />
+								</div>
+								<div class="columna3 ultimaCol" style="width:21%;">
+									<div style="float:right;">
+										<input type="radio" value="0" name="pago" />
+										<img title="Tarjeta" src="../images/tarjeta.png" />
+										<input type="radio" value="1" name="pago" style="margin-left:20px;" />
+										<img title="Efectivo" src="../images/moneda.png" />
+									</div>
+								</div>
+							</div>
+							<div class="fila" style="text-align:center; margin-top:20px;">
+								<input type="button" value="Facturar" id="facturar" class="boton botonGrande" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
