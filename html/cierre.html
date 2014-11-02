@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="cierreHoy">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description"content="P&aacute;gina de empleados."/>
@@ -10,9 +10,10 @@
 		
 		<link rel="icon" type="image/png" href="../images/favicon.png" />
 
-		<link rel="stylesheet" href="../css/base.css" />	
+		<link rel="stylesheet" href="../css/base.css" />
+			
 	</head>
-	<body>
+	<body data-ng-controller="CierreController">
 		<div id="wrapper">
 			<div id="page">
 				<div id="central">
@@ -22,8 +23,8 @@
 					<div class="cuerpo">
 						<div class="menuArriba">
 							<div class="clienteFactura">
-								<span class="nombreCliente">Cierre del d&iacute;a</span>
-								<span class="telefonoCliente">08-08-1988</span>
+								<span class="nombreCliente">{{cierre.mensajeCierre}}</span>
+								<span class="telefonoCliente">{{cierre.fechaCierre}}</span>
 							</div>
 							<img title="Cambiar empleado" class="imagenMenu" src="../images/salir.png" style="margin-left:20px;" />
 							<img title="P&aacute;gina clientes" class="imagenMenu" src="../images/cliente.png" />
@@ -33,15 +34,15 @@
 							<div class="operadores">
 								<div class="operador">+</div>
 								<div class="operandos">
-									<div class="operando1">134,98 &euro;
-										<img class="imagenOperandos" title="Total efectivo" src="../images/moneda.png" />
-									</div>
-									<div class="operando2">456,02 &euro;
-										<img class="imagenOperandos" title="Total tarjeta" src="../images/tarjeta.png" />
+									<div data-ng-repeat="operando in cierre.valoresCierre" class="operando{{$index+1}}">
+										<span>{{operando.valor}}</span> &euro;
+										<img class="imagenOperandos" title="{{operando.title}}" src="../images/{{operando.imagen}}.png" />
 									</div>
 								</div>
 							</div>
-							<div class="resultadoCierre">591,00 &euro;</div>
+							<div class="resultadoCierre" >
+								<span>{{cierre.valorTotal}}</span> &euro;
+							</div>
 						</div>
 						<div class="tabla" id="tablaCierre">
 							<div class="filaTabla">
@@ -50,38 +51,22 @@
 								<div class="columnaTabla cabecera columnaTratamiento">Tratamiento</div>
 								<div class="columnaTabla cabecera" style="border-right:0 none;">Precio</div>
 							</div>
-							<div class="filaTabla impar">
-								<div class="columnaTabla">Nombre Emp1</div>
-								<div class="columnaTabla">Chamberí</div>
-								<div class="columnaTabla columnaTratamiento">Mani Natural</div>
-								<div class="columnaTabla columnaCompartida">1.00&euro;</div>
+							<div class="filaTabla" data-ng-repeat="transaccion in cierre.tablaCierre">
+								<div class="columnaTabla">{{transaccion.empleado}}</div>
+								<div class="columnaTabla">{{transaccion.cliente}}</div>
+								<div class="columnaTabla columnaTratamiento">{{transaccion.tratamiento}}</div>
+								<div class="columnaTabla columnaCompartida">{{transaccion.precio}} &euro;</div>
 								<div class="columnaTabla iconoTabla" style="vertical-align: bottom;">
-									<img title="Efectivo" src="../images/moneda.png" />
-								</div>
-							</div>
-							<div class="filaTabla par">
-								<div class="columnaTabla">Nombre Emp2</div>
-								<div class="columnaTabla">Chamberí</div>
-								<div class="columnaTabla columnaTratamiento">Pedi Natural</div>
-								<div class="columnaTabla columnaCompartida">18.93&euro;</div>
-								<div class="columnaTabla iconoTabla" style="vertical-align: bottom;">
-									<img title="Efectivo" src="../images/moneda.png" />
-								</div>
-							</div>
-							<div class="filaTabla impar">
-								<div class="columnaTabla">Nombre Emp3</div>
-								<div class="columnaTabla">Chamberí</div>
-								<div class="columnaTabla columnaTratamiento">Pestañas Super Super Super Largas, tanto</div>
-								<div class="columnaTabla columnaCompartida">189.43&euro;</div>
-								<div class="columnaTabla iconoTabla" style="vertical-align: bottom;">
-									<img title="Tarjeta" src="../images/tarjeta.png" />
+									<img title="Efectivo" src="../images/{{transaccion.imagen}}.png" />
 								</div>
 							</div>
 						</div>
-						<hr>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../js/angular.min.js"></script>
+		<script type="text/javascript" src="../js/cierre.js"></script>
 	</body>
 </html>

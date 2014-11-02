@@ -60,12 +60,12 @@ hr{border-color:#4E387B; border-width:2px; margin-top:2px;}
 
 .tabla{width:100%; margin: 30px 0;}
 .filaTabla{display: table; width: 100%; height:40px;}
+.filaTabla:nth-child(odd){background-color:#BA8DDF; font-weight:bold;}
+.filaTabla:nth-child(even){background-color:#4E387B; color:#FFFFFF;}
 .columnaTabla{border-right: 2px solid black; display: table-cell; text-align: center; vertical-align: middle; width: 16%;}
 #tablaCliente .columnaCompartida{width:48%;}
 .iconoTabla{width:4%; border-right:0 none;}
-.cabecera{width:16%; border-bottom:2px solid #4E387B; font-weight:bold; font-size:25px;}
-.par{background-color:#4E387B; color:#FFFFFF;}
-.impar{background-color:#BA8DDF; font-weight:bold;}
+.cabecera{width:16%; border-bottom:2px solid #4E387B; font-weight:bold; font-size:25px; background-color:white!important;}
 
 #formFacturacion{margin-top:20px;}
 #formFacturacion .columna2{width:46%; margin-right:8%;}
@@ -73,7 +73,7 @@ hr{border-color:#4E387B; border-width:2px; margin-top:2px;}
 #tablaCierre .columnaCompartida{width:12%;}
 .columnaTratamiento{width:52%;}
 
-.sumaCierre{width:140px; margin: 0 auto; height:90px;}
+.sumaCierre{width:150px; margin: 0 auto; height:90px;}
 .operadores{height:75%; border-bottom:1px solid black; display:table; float:right;}
 .operador{display:table-cell; vertical-align:middle; text-align:center; padding-right:10px;}
 .operandos{display:table-cell; text-align: right; height:100%;}
