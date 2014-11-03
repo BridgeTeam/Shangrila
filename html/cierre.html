@@ -36,7 +36,7 @@
 								<div class="operandos">
 									<div data-ng-repeat="operando in cierre.valoresCierre" class="operando{{$index+1}}">
 										<span>{{operando.valor}}</span> &euro;
-										<img class="imagenOperandos" title="{{operando.title}}" src="../images/{{operando.imagen}}.png" />
+										<img class="imagenOperandos" title="{{operando.title}}" data-ng-src="../images/{{operando.imagen}}.png" />
 									</div>
 								</div>
 							</div>
@@ -57,7 +57,7 @@
 								<div class="columnaTabla columnaTratamiento">{{transaccion.tratamiento}}</div>
 								<div class="columnaTabla columnaCompartida">{{transaccion.precio}} &euro;</div>
 								<div class="columnaTabla iconoTabla" style="vertical-align: bottom;">
-									<img title="Efectivo" src="../images/{{transaccion.imagen}}.png" />
+									<img title="Efectivo" data-ng-src="../images/{{transaccion.imagen}}.png" />
 								</div>
 							</div>
 						</div>
