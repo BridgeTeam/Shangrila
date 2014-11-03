@@ -35,13 +35,13 @@
 								<div class="operador">+</div>
 								<div class="operandos">
 									<div data-ng-repeat="operando in cierre.valoresCierre" class="operando{{$index+1}}">
-										<span>{{operando.valor}}</span> &euro;
+										<span>{{operando.valor | precioComa2}}</span>
 										<img class="imagenOperandos" title="{{operando.title}}" data-ng-src="../images/{{operando.imagen}}.png" />
 									</div>
 								</div>
 							</div>
 							<div class="resultadoCierre" >
-								<span>{{cierre.valorTotal}}</span> &euro;
+								<span>{{cierre.valorTotal | precioComa2}}</span>
 							</div>
 						</div>
 						<div class="tabla" id="tablaCierre">
@@ -55,7 +55,7 @@
 								<div class="columnaTabla">{{transaccion.empleado}}</div>
 								<div class="columnaTabla">{{transaccion.cliente}}</div>
 								<div class="columnaTabla columnaTratamiento">{{transaccion.tratamiento}}</div>
-								<div class="columnaTabla columnaCompartida">{{transaccion.precio}} &euro;</div>
+								<div class="columnaTabla columnaCompartida">{{transaccion.precio | precioComa2}}</div>
 								<div class="columnaTabla iconoTabla" style="vertical-align: bottom;">
 									<img title="Efectivo" data-ng-src="../images/{{transaccion.imagen}}.png" />
 								</div>
