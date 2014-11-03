@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="cierreHoy">
+<html data-ng-app="Cierre">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description"content="P&aacute;gina de empleados."/>
@@ -44,7 +44,7 @@
 								<span>{{cierre.valorTotal | precioComa2}}</span>
 							</div>
 						</div>
-						<div class="tabla" id="tablaCierre">
+						<div class="tabla" id="tablaCierre" data-ng-show="cierre.muestraTabla">
 							<div class="filaTabla">
 								<div class="columnaTabla cabecera">Empleado</div>
 								<div class="columnaTabla cabecera">Cliente</div>

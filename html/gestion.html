@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="Gestion">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description"content="P&aacute;gina de empleados."/>
@@ -26,63 +26,65 @@
 						</div>
 						<hr>
 						<form class="formulario" id="formGestion">
-							<div class="fila">
+							<div class="fila" data-ng-controller="GestionObligatorios">
 								<div class="columna3">
 									<span class="textoGestion">Nombre</span>
-									<input type="text" class="caja cajaCorta" id="nombre" required/>
+									<input data-ng-model="basico.nombreCliente" type="text" class="caja cajaCorta" id="nombre"/>
 								</div>
 								<div class="columna3">
 									<span class="textoGestion">Apellidos</span>
-									<input type="text" class="caja cajaCorta" id="apellidos" />
+									<input data-ng-model="basico.apellidosCliente" type="text" class="caja cajaCorta" id="apellidos" />
 								</div>
 								<div class="columna3 ultimaCol">
 									<span class="textoGestion">Tel&eacute;fono</span>
-									<input type="number" class="caja cajaCorta" id="telefono" />
+									<input data-ng-model="basico.telCliente" type="number" class="caja cajaCorta" id="telefono" />
 								</div>
 							</div>
-							<div class="fila">
-								<div class="columna3">
-									<span class="textoGestion">Cod. Postal</span>
-									<input type="number" style="width:100px;" class="caja" id="codPost" />
-								</div>
-								<div class="columna3">
-									<span class="textoGestion">Sexo</span>
-									<div style="float:right;">
-										<input type="radio" value="0" name="sexo" />Chica
-										<input type="radio" value="1" name="sexo" />Chico
+							<div style="float:left;" data-ng-show="mostrarCamposAux" data-ng-controller="GestionCamposAux">
+								<div class="fila">
+									<div class="columna3">
+										<span class="textoGestion">Cod. Postal</span>
+										<input data-ng-model="codPostCliente" type="number" style="width:100px;" class="caja" id="codPost" />
+									</div>
+									<div class="columna3">
+										<span class="textoGestion">Sexo</span>
+										<div style="float:right;">
+											<input data-ng-model="esChicaCliente" type="radio" value="0" name="sexo" />Chica
+											<input data-ng-model="esChicoCliente" type="radio" value="1" name="sexo" />Chico
+										</div>
+									</div>
+									<div class="columna3 ultimaCol">
+										<span class="textoGestion">Edad</span>
+										<select data-ng-model="edadCliente" id="edadesCliente" style="width:138px;" class="caja">
+											<option value="0">Selecciona edad</option>
+											<option value="1">0 - 14</option>
+											<option value="2">15 - 25</option>
+											<option value="3">26 - 40</option>
+											<option value="4">41 - 60</option>
+											<option value="5">+ 60</option>
+										</select>
 									</div>
 								</div>
-								<div class="columna3 ultimaCol">
-									<span class="textoGestion">Edad</span>
-									<select id="edadesCliente" style="width:138px;" class="caja">
-										<option value="0">Selecciona edad</option>
-										<option value="1">0 - 14</option>
-										<option value="2">15 - 25</option>
-										<option value="3">26 - 40</option>
-										<option value="4">41 - 60</option>
-										<option value="5">+ 60</option>
-									</select>
+								<div class="fila">
+									<div class="columna2">
+										<span class="textoGestion">E-mail</span>
+										<input data-ng-model="mailCliente" type="email" style="width:230px;" class="caja" id="mail" />
+									</div>
+									<div class="columna2  ultimaCol">
+										<span class="textoGestion">Forma de contacto</span>
+										<select data-ng-model="contactoCliente" id="contactoCliente" class="caja cajaCorta">
+											<option value="0">Ninguna</option>
+											<option value="1">SMS</option>
+											<option value="2">Email</option>
+											<option value="3">Llamada</option>
+											<option value="4">Whatsapp</option>
+										</select>
+									</div>
 								</div>
-							</div>
-							<div class="fila">
-								<div class="columna2">
-									<span class="textoGestion">E-mail</span>
-									<input type="email" style="width:230px;" class="caja" id="mail" />
+								<div class="fila" style="text-align:center;">
+									<span class="textoGestion">Amiga de</span>
+									<input type="button" value="Consultar" id="consultar" class="boton botonPequeno" />
 								</div>
-								<div class="columna2  ultimaCol">
-									<span class="textoGestion">Forma de contacto</span>
-									<select id="edadesCliente" class="caja cajaCorta">
-										<option value="0">Ninguna</option>
-										<option value="1">SMS</option>
-										<option value="2">Email</option>
-										<option value="3">Llamada</option>
-										<option value="4">Whatsapp</option>
-									</select>
-								</div>
-							</div>
-							<div class="fila" style="text-align:center;">
-								<span class="textoGestion">Amiga de</span>
-								<input type="button" value="Consultar" id="consultar" class="boton botonPequeno" />
 							</div>
 							<hr style="float:left; width:100%;">
 							<div class="fila" style="text-align:center; margin-top:20px;">
@@ -93,5 +95,8 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../js/angular.min.js"></script>
+		<script type="text/javascript" src="../js/gestion.js"></script>
 	</body>
 </html>
